@@ -1,0 +1,52 @@
+<%- include('header'); -%>
+    <link rel="stylesheet" href="./homepage.css">
+    </head>
+
+    <body>
+        <%- include('navbar'); -%>
+        <div class="container reports">
+            <div class="stat">
+                 
+                <div class="writeup">
+                    Number of Users registered this month:
+                </div>
+                <div class="number">
+                    <%= numberUsers %>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="writeup">
+                    Number of active property listings this month:
+                </div>
+                <div class="number">
+                    <%= numberActive %>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="writeup">
+                    Number of Total Transactions made:
+                </div>
+                <div class="number">
+                    <%= numberTransaction %>
+                </div>
+            </div>
+            <div class="stat">
+                
+                <div class="writeup">
+                    Highest Transaction made:
+                </div>
+                <div class="number">
+                    ₹<%= numberHighest %>/-
+                </div>
+            </div>
+            <!-- <div class="stat">
+            
+                <div class="writeup">
+                    Lowest Transaction made:
+                </div>
+                <div class="number">
+                    ₹<%= numberLowest %>/-
+                </div>
+            </div> -->
+        </div>
+<%- include('footer'); -%>
