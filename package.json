@@ -19,9 +19,6 @@
     "express-session": "^1.17.2",
     "express-validator": "^6.14.0",
     "mongoose": "^6.1.3",
-    "mysql2": "^2.3.3",
-    "netlify-cli": "^12.7.2",
-    "netlify-lambda": "^2.0.16",
-    "serverless-http": "^2.7.0"
+    "mysql2": "^2.3.3"
   }
 }
