@@ -16,7 +16,7 @@ const {
     reports,
     sellerInfo,
 } = require("./controllers/userController");
-const { insertTransactionn } = require("./models/Transaction.model");
+//const { insertTransactionn } = require("./models/Transaction.model");
 const dbConnection = require("./utils/dbConnection");
 
 const ifNotLoggedin = (req, res, next) => {
@@ -52,7 +52,8 @@ router.post('/', ifNotLoggedin,[
                     buyerName : buyerName,
                     amount : price
                 }
-                const result = await insertTransactionn(transactionObj);
+                const [rows] = await dbConnection.execute("INSERT INTO `reason`(`buyerName`,`amount`) VALUES (?,?)",[reason]);
+                //const result = await insertTransactionn(transactionObj);
                 const [query] = await dbConnection.execute("DELETE FROM `properties` WHERE `propid`=?",[propid]);
                 res.redirect('/');
             }
